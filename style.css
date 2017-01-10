@@ -1,0 +1,28 @@
+#leftLight{
+			height: 200px;
+			width: 200px;
+			margin: 30px;
+			border: 12px solid blue;
+			border-radius: 25px;
+			display: none;
+
+		}
+
+/*#rightLight{
+			height: 50px;
+			width: 50px;
+			background: blue;
+			margin: 30px;
+			float: right
+		}*/
+
+		#stopBtn{
+			height: 200px;
+			width: 200px;
+			margin: 30px;
+			border: 12px solid blue;
+			border-radius: 25px;
+			text-align: center;
+
+		}
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Metronome</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.2/howler.core.min.js"></script>
+</head>
+
+<body>
+	
+
+	<div id="stopBtn">Click to start</div>
+
+	<div id="leftLight"></div>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+	  var sound = new Howl({
+      src: ['sounds/prism-1.mp3', 'sound.mp3']
+    });
+
+		var speed = 60 / parseInt(prompt('enter bpm')) * 1000
+		var timeout = parseInt(prompt('How many mins should this go for?')) * 60000
+		var metronomeOn = false
+		var time;
+
+		$('#stopBtn').click(function(){
+			time = setInterval(function(){
+			 $('#leftLight').toggle()
+			 sound.play()
+				}, speed)
+			
+			setTimeout(function(){
+		   	clearTimeout(time);
+			}, timeout);
+		});
+
+	</script>
+</body>
+</html>
